@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { projects } from "@/data/projects";
+import { projects } from "@/src/data/projects";
 
 export default async function ProjectDetail({
   params,
@@ -13,9 +13,15 @@ export default async function ProjectDetail({
   return (
     <main>
       <h1>{project.title}</h1>
-      <p><strong>Role:</strong> {project.role}</p>
-      <p><strong>Stack:</strong> {project.stack}</p>
-      <p><strong>Year:</strong> {project.year}</p>
+      <p>
+        <strong>Role:</strong> {project.role}
+      </p>
+      <p>
+        <strong>Stack:</strong> {project.stack}
+      </p>
+      <p>
+        <strong>Year:</strong> {project.year}
+      </p>
     </main>
   );
 }
