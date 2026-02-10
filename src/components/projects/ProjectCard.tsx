@@ -11,40 +11,40 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <article className={styles.projectCard}>
       <Link
-        className={styles.projectCard__mediaLink}
+        className={styles.mediaLink}
         href={`/projects/${project.slug}`}
       >
-        <div className={styles.projectCard__media} aria-hidden="true" />
+        <div className={styles.media} aria-hidden="true" />
       </Link>
-      <div className={styles.projectCard__body}>
-        <h3 className={styles.projectCard__title}>
+      <div className={styles.body}>
+        <h3 className={styles.title}>
           <Link
             href={`/projects/${project.slug}`}
-            className="projectCard__titleLink"
+            className={styles.titleLink}
           >
             {project.title}
           </Link>
         </h3>
 
-        <dl className={styles.projectCard__meta}>
-          <div className={styles.projectCard__metaRow}>
-            <dt className={styles.projectCard__label}>Role:</dt>
-            <dd className={styles.projectCard__value}>{project.role}</dd>
+        <div className={styles.meta}>
+          <div className={styles.metaRow}>
+            <span className={styles.label}>Role:</span>
+            <span className={styles.value}>{project.role}</span>
           </div>
-          <div className={styles.projectCard__metaRow}>
-            <dt className={styles.projectCard__label}>Stack:</dt>
-            <dd className={styles.projectCard__value}>{project.stack}</dd>
+          <div className={styles.metaRow}>
+            <span className={styles.label}>Stack:</span>
+            <span className={styles.value}>{project.stack}</span>
           </div>
-          <div className={styles.projectCard__metaRow}>
-            <dt className={styles.projectCard__label}>Year:</dt>
-            <dd className={styles.projectCard__value}>{project.year}</dd>
+          <div className={styles.metaRow}>
+            <span className={styles.label}>Year:</span>
+            <span className={styles.value}>{project.year}</span>
           </div>
-        </dl>
+        </div>
 
-        <div className={styles.projectCard__links}>
+        <div className={styles.links}>
           {project.liveUrl && (
             <a
-              className={styles.projectCard__link}
+              className={styles.link}
               href={project.liveUrl}
               target="_blank"
               rel="noreferrer"
@@ -55,7 +55,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
           {project.githubUrl && (
             <a
-              className={styles.projectCard__link}
+              className={styles.link}
               href={project.githubUrl}
               target="_blank"
               rel="noreferrer"

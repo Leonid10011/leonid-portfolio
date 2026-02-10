@@ -111,6 +111,7 @@ p {
   padding-left: var(--container-pad);
   padding-right: var(--container-pad);
   margin: 0 auto;
+  padding-block: var(--space-96);
 }
 
 .btn {

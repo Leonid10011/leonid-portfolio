@@ -1,0 +1,9 @@
+.projectsInner {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-32);
+}
+
+.projectsHeadline {
+    text-align: center;
+}

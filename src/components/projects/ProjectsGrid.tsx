@@ -1,5 +1,6 @@
 import { Project } from "@/src/types/projects"
 import ProjectCard from "./ProjectCard";
+import styles from "./ProjectsGrid.module.css";
 
 type ProjectsGridProps = {
     projects: Project[];
@@ -8,7 +9,7 @@ type ProjectsGridProps = {
 export default function ProjectsGrid({ projects }: ProjectsGridProps) {
 
     return(
-        <div className="projects__grid">
+        <div className={styles.projectsGrid}>
             {projects.map((project) => (
                 <ProjectCard key={project.slug} project={project} />
             ))}
