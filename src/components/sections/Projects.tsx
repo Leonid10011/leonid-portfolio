@@ -2,9 +2,7 @@ import { projects } from "@/src/data/projects";
 import Container from "../layout/Container";
 import ProjectsGrid from "../projects/ProjectsGrid";
 
-export default function Projects({children} : 
-    {children: React.ReactNode}
-) {
+export default function Projects() {
     return (
         <section id="projects" className="projects" aria-labelledby="projects-heading">
             <Container>
