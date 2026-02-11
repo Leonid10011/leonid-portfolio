@@ -5,7 +5,7 @@ import styles from "./Projects.module.css"
 
 export default function Projects() {
     return (
-        <section id="projects" className="projects" aria-labelledby="projects-heading">
+        <section id="projects" className={styles.projects} aria-labelledby="projects-heading">
             <Container>
                 <div className={styles.projectsInner}>
                     <h2 id="projects-heading" className={styles.projectsHeadline} >Projects</h2>

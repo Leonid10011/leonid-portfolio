@@ -1,25 +1,25 @@
-.heroInner {
+.inner {
     display: flex;
     flex-direction: column;
     gap: var(--space-64);
 }
 
-.heroContent {
+.content {
     display: flex;
     flex-direction: column;
 }
 
-.heroHeadline {
+.headline {
     margin-bottom: var(--space-24);
 }
 
-.heroSubline {
+.subline {
     margin-bottom: var(--space-64);
     font-size: 20px;
     font-weight: 300;
 }
 
-.heroCtas {
+.ctas {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -27,16 +27,16 @@
 }
 
 @media (min-width: 900px) {
-    .heroInner {
+    .inner {
         flex-direction: row;
         align-items: center;
     }
 
-    .heroContent {
+    .content {
         max-width: 683px;
     }
 
-    .heroSubline {
+    .subline {
         font-size: 32px;
     }
 }

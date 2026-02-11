@@ -1,8 +1,10 @@
+import styles from "./Skills.module.css";
+
 export default function Skills () {
     return (
-        <div className="skills">
-            <div className="skills-group">
-                <h3 className="skils-title">Frontend</h3>
+        <div className={styles.inner}>
+            <div className={styles.group}>
+                <h3 className={styles.title}>Frontend</h3>
                 <ul>
                     <li>Next.js</li>
                     <li>React</li>
@@ -10,15 +12,15 @@ export default function Skills () {
                     <li>Modern CSS</li>
                 </ul>
             </div>
-            <div className="skills-group">
-                <h3 className="skils-title">Tools</h3>
+            <div className={styles.group}>
+                <h3 className={styles.title}>Tools</h3>
                 <ul>
                     <li>GitHub</li>
                     <li>Figma</li>
                 </ul>
             </div>
-            <div className="skills-group">
-                <h3 className="skils-title">Frontend</h3>
+            <div className={styles.group}>
+                <h3 className={styles.title}>Frontend</h3>
                 <ul>
                     <li>WordPress (Headless)</li>
                     <li>Cutsom Post Types</li>

@@ -1,3 +1,8 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
 :root {
 
     /* font families */
@@ -108,8 +113,7 @@ p {
 
 .container {
   max-width: var(--container-max);
-  padding-left: var(--container-pad);
-  padding-right: var(--container-pad);
+    padding-inline: var(--container-pad);
   margin: 0 auto;
   padding-block: var(--space-96);
 }

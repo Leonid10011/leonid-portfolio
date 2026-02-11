@@ -1,0 +1,22 @@
+.inner {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-64);
+}
+
+.group ul {
+    list-style: none;
+    padding: 0;
+}
+
+.group li {
+    margin-bottom: var(--space-16);
+}
+
+.group li:last-child {
+    margin-bottom: 0;
+}
+
+.title {
+    margin-bottom: var(--space-24);
+}
