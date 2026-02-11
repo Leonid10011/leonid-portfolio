@@ -1,0 +1,14 @@
+.item {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: var(--space-32)
+}
+.itemMedia {
+    width: clamp(80px, 10vw, 100px);
+    aspect-ratio: 1 / 1;
+    border-radius: var(--radius-8);
+    overflow: hidden;
+
+    background: linear-gradient(135deg, rgba(126,165,242,0.28), rgba(15,23,42,0.06));
+    border: 1px solid var(--color-border);
+}

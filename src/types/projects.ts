@@ -12,5 +12,11 @@ export type Project = {
     solution: string;
     architecture: string;
     frontend: string;
+    implementationItems: ImplementationItem[];
     learnings: string;
+}
+
+export type ImplementationItem = {
+    desc: string;
+    imgSrc: string;
 }

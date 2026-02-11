@@ -1,5 +1,6 @@
 import { Project } from "../types/projects";
 
+
 export const projects: Project[] = [
   {
     slug: "aurea-gym",
@@ -15,6 +16,11 @@ export const projects: Project[] = [
     solution: "I built a headless architecture using Next.js.",
     architecture: "Next.js frontend + WordPress CMS via REST API.",
     frontend: "Component-based UI with server components.",
+    implementationItems: [{
+      desc: "test",
+      imgSrc: "test",
+    },
+    ],
     learnings: "Clear data models and performance-first thinking.",
   },
   {
@@ -31,6 +37,11 @@ export const projects: Project[] = [
     solution: "I built a headless architecture using Next.js.",
     architecture: "Next.js frontend + WordPress CMS via REST API.",
     frontend: "Component-based UI with server components.",
+    implementationItems: [{
+      desc: "test",
+      imgSrc: "test",
+    },
+    ],
     learnings: "Clear data models and performance-first thinking.",
   },
   {
@@ -47,6 +58,11 @@ export const projects: Project[] = [
     solution: "I built a headless architecture using Next.js.",
     architecture: "Next.js frontend + WordPress CMS via REST API.",
     frontend: "Component-based UI with server components.",
+    implementationItems: [{
+      desc: "test",
+      imgSrc: "test",
+    },
+    ],
     learnings: "Clear data models and performance-first thinking.",
   },
 ];

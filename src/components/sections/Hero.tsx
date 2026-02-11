@@ -6,11 +6,11 @@ export default function Hero() {
     return (
         <section id="hero" aria-labelledby="hero-heading">
             <Container>
-                <div className={styles.hero__inner}>
-                    <div className={styles.hero__content}>
-                        <h1 id="hero-heading" className={styles.hero__headline}>Frontend Developer focused on design and architecture</h1>
-                        <p className={styles.hero__subline}>I build fast, scalable websites with Next.js and WordPress.</p>
-                        <div className={styles.hero__ctas}>
+                <div className={styles.heroInner}>
+                    <div className={styles.heroContent}>
+                        <h1 id="hero-heading" className={styles.heroHeadline}>Frontend Developer focused on design and architecture</h1>
+                        <p className={styles.heroSubline}>I build fast, scalable websites with Next.js and WordPress.</p>
+                        <div className={styles.heroCtas}>
                             <Link href={"#contact"} className="btn btnPrimary">CONTACT</Link>
                             <Link href={"#projects"} className="btn btnSecondary">PROJECTS</Link>
                         </div>

@@ -2,6 +2,7 @@ import { Project } from "@/src/types/projects";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./ProjectCard.module.css";
+import ProjectMeta from "./ProjectMeta";
 
 type ProjectCardProps = {
   project: Project;
@@ -25,22 +26,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             {project.title}
           </Link>
         </h3>
-
-        <div className={styles.meta}>
-          <div className={styles.metaRow}>
-            <span className={styles.label}>Role:</span>
-            <span className={styles.value}>{project.role}</span>
-          </div>
-          <div className={styles.metaRow}>
-            <span className={styles.label}>Stack:</span>
-            <span className={styles.value}>{project.stack}</span>
-          </div>
-          <div className={styles.metaRow}>
-            <span className={styles.label}>Year:</span>
-            <span className={styles.value}>{project.year}</span>
-          </div>
-        </div>
-
+        <ProjectMeta project={project} />
         <div className={styles.links}>
           {project.liveUrl && (
             <a

@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
 import { projects } from "@/src/data/projects";
 import Container from "@/src/components/layout/Container";
+import ProjectDetails from "@/src/components/projects/ProjectDetails";
+import styles from "./page.module.css";
 
 export default async function ProjectDetail({
   params,
@@ -13,35 +15,8 @@ export default async function ProjectDetail({
 
   return (
     <Container>
-
-      <main>
-        <h1>{project.title}</h1>
-        <p>{project.summary}</p>
-
-        <section>
-          <h2>Problem & Goal</h2>
-          <p>{project.problem}</p>
-        </section>
-
-        <section>
-          <h2>Solution</h2>
-          <p>{project.solution}</p>
-        </section>
-
-        <section>
-          <h2>Architecture</h2>
-          <p>{project.architecture}</p>
-        </section>
-
-        <section>
-          <h2>Frontend Implementation</h2>
-          <p>{project.frontend}</p>
-        </section>
-
-        <section>
-          <h2>Learnings</h2>
-          <p>{project.learnings}</p>
-        </section>
+      <main className={styles.main}>
+        <ProjectDetails project={project}/>
       </main>
     </Container>
   );

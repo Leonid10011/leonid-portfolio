@@ -1,5 +1,6 @@
 .projectsGrid {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: var(--space-32);
 }
