@@ -3,16 +3,16 @@ import { Project } from "../types/projects";
 
 export const projects: Project[] = [
   {
-    slug: "aurea-gym",
-    title: "Aurea Gym (Headless WP)",
+    slug: "portfolio",
+    title: "Portfolio Page Leonid Desing",
     role: "Frontend / Architecture / UI",
     stack: ["Next.js, TypeScript, WordPress (Headless)"],
     year: 2026,
     liveUrl: "https://example.com",
-    githubUrl: "https://github.com/yourname/aurea",
+    githubUrl: "https://github.com/leonid10011/leonid-portfolio",
 
-    summary: "Headless website for a fitness studio.",
-    problem: "The existing site was slow and hard to maintain.",
+    summary: "Headless Portfolio website",
+    problem: "Need a site that is easy scanable and fast.",
     solution: "I built a headless architecture using Next.js.",
     architecture: "Next.js frontend + WordPress CMS via REST API.",
     frontend: "Component-based UI with server components.",

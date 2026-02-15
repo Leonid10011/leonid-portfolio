@@ -61,6 +61,9 @@
 
 
 html, body {
+  min-height: 100%;
+  text-rendering: optimizeLegibility;
+  --webkit-font-smoothing: antialiased;
   margin: 0;
   padding: 0;
   background: var(--color-bg);
@@ -99,6 +102,33 @@ p {
     margin: 0;
 }
 
+.prose {
+  max-width: 65ch;
+}
+
+.prose p + p {
+  margin-top: var(--space-16);
+}
+
+.prose h2 {
+  margin-top: var(--space-48);
+  margin-bottom: var(--space-16);
+}
+
+.prose h3 {
+  margin-top: var(--space-32);
+  margin-bottom: var(--space-12);
+}
+
+.prose ul {
+  margin-top: var(--space-16);
+  padding-left: 1.2rem;
+}
+
+.prose li + li {
+  margin-top: var(--space-8);
+}
+
 .text-meta {
     color: var(--color-meta);
     font-size: var(--fs-meta);
@@ -113,9 +143,8 @@ p {
 
 .container {
   max-width: var(--container-max);
-    padding-inline: var(--container-pad);
+  padding-inline: var(--container-pad);
   margin: 0 auto;
-  padding-block: var(--space-96);
 }
 
 .btn {
@@ -128,12 +157,45 @@ p {
   font-weight: var(--fw-bold);
   text-decoration: none;
   border: 1px solid transparent;
+
+  transition: 
+    transform 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
 }
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .btn {
+    transition: none;
+  }
+
+  .btn:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+
+a:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
 
 .btnPrimary {
     padding: var(--space-16) var(--space-32);
     background: var(--color-accent);
-    color: var(--color-text);
+    color: #fff;
 }
 
 .btnSecondary {

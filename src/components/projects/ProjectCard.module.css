@@ -7,6 +7,12 @@
     background: linear-gradient(135deg, rgba(126,165,242,0.28), rgba(15,23,42,0.06));
     border: 1px solid var(--color-border);
     border-radius: 8px 8px 0 0;
+
+    transition: box-shadow 150ms ease;
+}
+
+.media:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .body {
@@ -15,6 +21,18 @@
 
 .title {
     margin-block: var(--space-24);
+
+    transition: transform 150ms ease, color 150ms ease;
+}
+
+.title a {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.title a:hover {
+    transform: scale(1.05);
+    color: var(--color-accent);
 }
 
 .links {
@@ -29,4 +47,11 @@
     height: 44px;
     justify-content: center;
     color: var(--color-accent);
+
+    transition: transform 150ms ease, text-shadow 150ms ease;
+}
+
+.link:hover {
+    transform: scale(1.03);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, .15);
 }

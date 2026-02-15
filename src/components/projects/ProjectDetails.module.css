@@ -57,6 +57,6 @@
     align-items: center;
 }
 
-.section .headline {
+.section h2 {
     padding-bottom: var(--space-48);
 }

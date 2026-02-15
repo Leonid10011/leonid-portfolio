@@ -9,7 +9,7 @@ export default function About() {
                 <div className={styles.inner}>
                     <h2 id="about-heading" className={styles.headline}>About</h2>
                     <div className={styles.content}>
-                        <div className={styles.text}>
+                        <div className={`${styles.text} prose`}>
                             <p>
                                 I’m a frontend-focused developer with an interest in clean architecture, performance and modern CMS-driven workflows.
                             </p>

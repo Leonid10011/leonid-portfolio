@@ -11,13 +11,13 @@
     display: grid;
     padding-block: var(--space-48);
     grid-template-columns: auto auto;
+
 }
 
 .text {
     display: flex;
     flex-direction: column;
     padding-inline: var(--space-48);
-    gap: var(--fs-body);
     max-width: 440px;
 }
 
@@ -26,4 +26,11 @@
     flex-direction: column;
     gap: var(--space-32);
     padding-inline: var(--space-48);
+}
+
+@media (max-width: 900px) {
+    .content {
+            display: flex;
+            flex-direction: column;
+    }
 }
