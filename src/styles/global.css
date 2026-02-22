@@ -50,14 +50,19 @@
   --radius-8: 8px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   :root {
-    --fs-h1: 36px;
+    --fs-meta: 13px;
+    --fs-body: 16px;
+    --fs-subline: 20px;
+    
+    --fs-h1: 32px;
     --fs-h2: 24px;
+    --fs-h3: 18px;
+
     --container-pad: 24px;
   }
 }
-
 
 
 html, body {
@@ -153,11 +158,13 @@ p {
   justify-content: center;
   min-height: 44px;
   padding: 0 18px;
+  font-family: var(--ff-heading), system-ui, sans-serif;
   border-radius: var(--radius-8);
   font-weight: var(--fw-bold);
   text-decoration: none;
   border: 1px solid transparent;
-
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-semibold);
   transition: 
     transform 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
 }
@@ -193,14 +200,15 @@ a:focus-visible {
 
 
 .btnPrimary {
-    padding: var(--space-16) var(--space-32);
+    padding: var(--space-24) var(--space-32);
     background: var(--color-accent);
     color: #fff;
 }
 
 .btnSecondary {
-    padding: var(--space-8) var(--space-24);
+    padding: var(--space-16) var(--space-24);
     background: transparent;
     border-color: var(--color-accent);
     color: var(--color-accent);
 }
+
