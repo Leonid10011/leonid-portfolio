@@ -21,8 +21,8 @@
 
 .title {
     margin-block: var(--space-24);
-
     transition: transform 150ms ease, color 150ms ease;
+    text-align: center;
 }
 
 .title a {
@@ -55,3 +55,4 @@
     transform: scale(1.03);
     text-shadow: 0 2px 4px rgba(0, 0, 0, .15);
 }
+
