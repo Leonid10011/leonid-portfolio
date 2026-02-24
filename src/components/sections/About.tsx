@@ -7,7 +7,7 @@ export default function About() {
         <section id="about" className={styles.about} aria-labelledby="about-heading">
             <Container>
                 <div className={styles.inner}>
-                    <h2 id="about-heading" className={styles.headline}>About</h2>
+                    <h2 id="about-heading" className={styles.headline}>About Me</h2>
                     <div className={styles.content}>
                         <div className={`${styles.text} prose`}>
                             <p>

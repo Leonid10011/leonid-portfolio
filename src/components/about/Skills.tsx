@@ -20,7 +20,7 @@ export default function Skills () {
                 </ul>
             </div>
             <div className={styles.group}>
-                <h3 className={styles.title}>Frontend</h3>
+                <h3 className={styles.title}>CMS & Backend</h3>
                 <ul>
                     <li>WordPress (Headless)</li>
                     <li>Cutsom Post Types</li>
