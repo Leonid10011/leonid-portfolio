@@ -10,6 +10,7 @@
 .content {
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: var(--space-48);
 }
 
@@ -17,9 +18,17 @@
 .text {
     display: flex;
     flex-direction: column;
-    padding-inline: var(--space-48);
-    max-width: 440px;
+    padding-inline: 0;
+    max-width: 342px;
     text-align: center;
+}
+
+.textMobile {
+    display: block;
+}
+
+.textDesktop {
+    display: none;
 }
 
 .skills {
@@ -45,7 +54,17 @@
 
     .text {
         text-align: start;
+        padding-inline: var(--space-48);
+        max-width: 440px;
     }
+
+    .textMobile {
+        display: none;
+    }
+
+    .textDesktop {
+        display: block;
+    }    
 
     .skills {
         display: flex;

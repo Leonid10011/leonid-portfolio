@@ -4,39 +4,38 @@
     gap: var(--space-48);
 }
 
+.group ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Nutze gap für den Abstand zwischen Text und Punkt */
+    column-gap: var(--space-12); 
+    row-gap: var(--space-8);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.group li {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+/* Der Punkt wird NUR zwischen den Elementen eingefügt */
+.group li:not(:last-child)::after {
+    content: "•";
+    /* Schiebt den Punkt präzise in die Mitte der Gap */
+    margin-left: var(--space-12); 
+    color: currentColor; /* Passt sich der Textfarbe an */
+}
+
 .group {
     display: flex;
     flex-direction: column;
     gap: var(--space-16);
 }
 
-.group ul {
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: var(--space-8);
-    padding: 0;
-    margin: 0;
-}
-
-
-.group li {
-    list-style: none;
-    position: relative;
-    font-size: 16px;
-
-}
-
-.group li::before {
-    content: "•";
-    margin-right: var(--space-8);
-    display: inline-block;
-    width: 8px;
-}
-.group li:last-child {
-    margin-bottom: 0;
-}
 
 .title {
     text-align: center;
@@ -44,6 +43,8 @@
     line-height: 1.5;
     font-weight: var(--fw-medium);
 }
+
+
 
 @media (min-width: 768px) {
     .inner {
@@ -61,17 +62,6 @@
     .group li {
         margin-bottom: var(--space-16);
         list-style: none;
-    }
-
-    .group li::before {
-        content: "";
-        margin-right: 0;
-        display: inline-block;
-        width: 0;
-    }
-
-    .group li:last-child {
-        margin-bottom: 0;
     }
 
     .title {

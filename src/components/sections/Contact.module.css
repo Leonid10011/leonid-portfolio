@@ -1,18 +1,30 @@
 .inner {
     display: flex;
     flex-direction: column;
-    gap: var(--space-64);
+    gap: var(--space-48);
     align-items: center;
+    margin-bottom: var(--space-64);
 }
 
 .content {
-    width: clamp(320px, 50vw, 580px);
+    width: clamp(342px, 50vw, 580px);
     display: flex;
     flex-direction: column;
-    gap: var(--space-64);
+    gap: var(--space-48);
     align-items: center;
 }
 
 .content p {
     text-align: center;
+}
+
+@media (min-width: 768px) {
+    .inner {
+        gap: var(--space-64);
+        margin-bottom: var(--space-96);
+    }
+    
+    .content {
+        gap: var(--space-64);
+    }
 }
