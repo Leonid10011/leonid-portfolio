@@ -3,9 +3,12 @@
 > A high-performance, accessible portfolio designed to showcase engineering skills and architectural best practices.
 > 
 
-![Static Badge](https://img.shields.io/badge/Next.js-white?logo=nextdotjs)
-![Static Badge](https://img.shields.io/badge/WordPress-white?logo=wordpress)
+![Static Badge](https://img.shields.io/badge/Next.js-black?logo=nextdotjs)
+
+![Static Badge](https://img.shields.io/badge/WordPress-black?logo=wordpress)
+
 ![Static Badge](https://img.shields.io/badge/Figma-white?logo=figma)
+
 ![Static Badge](https://img.shields.io/badge/lighthouse-white?logo=Lighthouse)
 
 ---
