@@ -3,7 +3,7 @@
 > A high-performance, accessible portfolio designed to showcase engineering skills and architectural best practices.
 > 
 
-[Next.js](https://img.shields.io)
+[![Next.js](https://img.shields.io)](https://nextjs.org)
 
 ---
 
