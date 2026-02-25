@@ -1,14 +1,22 @@
+"use client";
+
 import { Project } from "@/src/types/projects";
-import Image from "next/image";
 import Link from "next/link";
 import styles from "./ProjectCard.module.css";
 import ProjectMeta from "./ProjectMeta";
+import { useEffect } from "react";
+
 
 type ProjectCardProps = {
   project: Project;
 };
 
 export default function ProjectCard({ project }: ProjectCardProps) {
+  
+  useEffect(() => {
+    console.log("Test: ", project);
+  })
+
   return (
     <article className={styles.projectCard}>
       <Link
