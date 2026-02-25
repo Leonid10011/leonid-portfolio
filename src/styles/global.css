@@ -32,6 +32,7 @@
   --color-muted: #9CA3AF;      /* muted text */
   --color-accent: #7EA5F2;     /* CTA */
   --color-border: rgba(15, 23, 42, 0.12);
+  --color-link: #0a259c;
   --color-bg: #ffffff;
 
   /* spacing */

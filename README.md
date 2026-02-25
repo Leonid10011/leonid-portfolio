@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Modern Portfolio | Next.js & Headless WordPress
 
-## Getting Started
+> A high-performance, accessible portfolio designed to showcase engineering skills and architectural best practices.
+> 
 
-First, run the development server:
+[Next.js](https://img.shields.io)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📸 Preview
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+[Project Screenshot](https://via.placeholder.com)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+*Live Demo:* [placeholder.com](https://your-portfolio-url.com/)
 
-## Learn More
+## 🎯 Project Purpose
 
-To learn more about Next.js, take a look at the following resources:
+This repository serves as a showcase for my skills in **Frontend Engineering** and **System Architecture**. It focuses on delivering a seamless user experience while maintaining a clean, scalable codebase.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠 Tech Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Layer | Technology |
+| --- | --- |
+| **Frontend** | [Next.js](https://nextjs.org/) (App Router), CSS Modules |
+| **Backend** | Headless WordPress via REST API / WPGraphQL |
+| **Design** | Figma |
+| **Deployment** | Vercel |
 
-## Deploy on Vercel
+## ⚡ Performance & Quality
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+One of the primary goals was to achieve a perfect audit score. By optimizing the critical rendering path and asset delivery, the site consistently hits:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Performance:** 96/100
+- **Accessibility:** 100/100
+- **Best Practices:** 100/100
+- **SEO:** 100/100
+
+## ✨ Key Features
+
+- **Responsive & Mobile-First:** Fluid layouts optimized for all device sizes.
+- **Headless Architecture:** Decoupled frontend for superior speed and security.
+- **Optimized Asset Loading:** Automated image optimization and zero-layout-shift font loading.
+- **Clean Codebase:** Modular CSS and component-driven development.
+
+## 🚀 Getting Started
+
+1. **Clone the repo:** `git clone ...`
+2. **Install dependencies:** `npm install`
+3. **Run local dev server:** `npm run dev`
+
+---
+
+*Developed with a focus on performance, accessibility, and user experience.*

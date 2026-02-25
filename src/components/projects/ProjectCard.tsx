@@ -14,6 +14,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       <Link
         className={styles.mediaLink}
         href={`/projects/${project.slug}`}
+        aria-label="View project case study."
       >
         <div className={styles.media} aria-hidden="true" />
       </Link>

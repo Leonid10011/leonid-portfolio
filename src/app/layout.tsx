@@ -17,6 +17,14 @@ const fontBody = Inter({
   display: "swap",
 })
 
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Leonid Design | Frontend Developer',
+  description: 'Frontend Developer focused on design and architecture. I build fast, scalable websites with Next.js and WordPress.',
+}
+
+
 export default function RootLayout({
   children,
 }: {
