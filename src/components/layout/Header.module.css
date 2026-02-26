@@ -1,0 +1,34 @@
+.inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: var(--space-16);
+}
+
+.navLinks{
+    display: none;
+    
+    
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+.navCta {
+    width: 90px;
+    height: auto;
+    font-size: var(--fs-16);
+}
+
+@media (min-width: 768px) {
+    .navLinks {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        gap: var(--space-16);
+    }
+}
+
