@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Container from "../layout/Container";
 import styles from "./Hero.module.css";
+import Button from "../ui/Button";
 
 export default function Hero() {
     return (
@@ -11,8 +12,8 @@ export default function Hero() {
                         <h1 id="hero-heading" className={styles.headline}>Frontend Developer focused on design and architecture</h1>
                         <p className={styles.subline}>I build fast, scalable websites with Next.js and WordPress.</p>
                         <div className={styles.ctas}>
-                            <Link href={"#contact"} className="btn btnPrimary">CONTACT</Link>
-                            <Link href={"#projects"} className="btn btnSecondary">PROJECTS</Link>
+                            <Button href={"#contact"} text="CONTACT" type="btnPrimary"/>
+                            <Button href={"#projects"} text="PROJECTS" type="btnSecondary"/>
                         </div>
                     </div>
                     <div  className={styles.visuals} aria-hidden="true">

@@ -6,7 +6,6 @@ export type WpAcfProject = {
     year: number;
     liveUrl?: string;
     githubUrl?: string;
-
     summary: string;
     problem: string;
     solution: string;
