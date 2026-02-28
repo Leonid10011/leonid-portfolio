@@ -1,4 +1,5 @@
-import { Project } from "@/src/types/projects";
+
+import { Project } from "@/src/lib/wp/mapper";
 import styles from "./ProjectMeta.module.css";
 
 export default function ProjectMeta ({project} : {project: Project}) {
