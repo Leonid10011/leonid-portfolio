@@ -1,5 +1,4 @@
 import Footer from "../components/layout/Footer";
-import Header from "../components/layout/Header";
 import "@/src/styles/global.css";
 import  { Saira, Inter } from "next/font/google";
 
@@ -33,7 +32,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${fontHeading.variable} ${fontBody.variable}`}>
       <body>
-        <Header />
         {children}
         <Footer />
       </body>

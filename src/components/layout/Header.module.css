@@ -8,8 +8,6 @@
 
 .navLinks{
     display: none;
-    
-    
 }
 
 .logo {
@@ -24,11 +22,17 @@
 }
 
 @media (min-width: 768px) {
+    .logo {
+        width: 180px;
+    }
+
     .navLinks {
         display: flex;
         flex-direction: row;
+        align-items: center;
         list-style: none;
         gap: var(--space-16);
+        padding: 0;
     }
 }
 

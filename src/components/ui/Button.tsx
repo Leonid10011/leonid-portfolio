@@ -3,12 +3,12 @@ import Link from "next/link";
 type ButtonProps = {
     href: string;
     text: string;
-    type?: "btnPrimary" | "btnSecondary";
+    variant?: "primary" | "secondary" |"nav";
 }
 
-export default function Button({ href, text="Button", type = "btnPrimary" }: ButtonProps) {        
+export default function Button({ href, text="Button", variant = "primary" }: ButtonProps) {        
     return (    
-        <Link href={href} className={`btn ${type}`}>
+        <Link href={href} className={`btn btn--${variant}`}>
             {text}
         </Link>
     )

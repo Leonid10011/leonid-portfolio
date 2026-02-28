@@ -11,7 +11,7 @@ export default function Contact () {
                 <h2 id="contact-heading" className={styles.headline}>Contact</h2>
                 <div className={styles.content}>
                     <p>I’m currently open to frontend roles or project-based work. Feel free to reach out if you’d like to get in touch.</p>
-                    <Button href={"mailto:leo@domain.com?subject=Frontend%20Opportunity"} text="Contact Now" type="btnPrimary"/>
+                    <Button href={"mailto:leo@domain.com?subject=Frontend%20Opportunity"} text="Contact Now" variant="primary"/>
                 </div>
             </div>
             </Container>
