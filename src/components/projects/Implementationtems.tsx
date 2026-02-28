@@ -6,7 +6,7 @@ export default function ImplementationItems ({items} : {items: ImplementationIte
         <div className="inner">
             {items.map((i ,k ) => (
                 <div className={styles.item} key={`item${k}`}>
-                    <p>{i.desc}</p>
+                    <p>{i.description}</p>
                     <div className={styles.itemMedia}>
 
                     </div>
