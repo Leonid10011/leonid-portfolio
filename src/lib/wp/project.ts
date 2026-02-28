@@ -24,3 +24,34 @@ export async function getProjectBySlug(slug: string): Promise<WpProject | null> 
     return items[0] ?? null;
 }
 
+export async function getProjectsSafe(): Promise<WpProject[]> {
+
+    try {
+        return await fetchJson<WpProject[]>("/project?per_page=10", {
+            next: {
+                revalidate: 60, // Revalidate every 60 seconds
+                tags: ["projects"], // Tag for cache invalidation
+            },
+        });
+    } catch (error) {
+        console.error("[WP] Failed to fetch projects:", error);
+        return [];
+    }
+}
+
+export async function getProjectBySlugSafe(slug: string): Promise<WpProject | null> {
+
+    try {
+    const items = await fetchJson<WpProject[]>(`/project?slug=${encodeURIComponent(slug)}`, {
+        next: {
+            revalidate: 60,
+            tags: ["projects", `project:${slug}`]
+        }
+    });
+    
+    return items[0] ?? null;
+    } catch (error) {
+        console.error(`[WP] Failed to fetch project with slug "${slug}":`, error);
+        return null;        
+    }
+}
