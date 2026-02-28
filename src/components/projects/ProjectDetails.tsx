@@ -1,4 +1,4 @@
-import { Project } from "@/src/types/projects";
+import { Project } from "@/src/lib/wp/mapper";
 import styles from "./ProjectDetails.module.css";
 import ProjectMeta from "./ProjectMeta";
 import Link from "next/link";
