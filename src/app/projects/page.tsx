@@ -1,7 +1,12 @@
 import Link from "next/link";
-import { projects } from "@/src/data/projects";
+import { getProjects } from "@/src/lib/wp/project";
+import { mapWpProject } from "@/src/lib/wp/mapper";
 
-export default function ProjectsPage() {
+export default async function ProjectsPage() {
+
+  const wpProjects = await getProjects();
+  const projects = wpProjects.map(mapWpProject);
+
   return (
     <main>
       <h1>Projects</h1>

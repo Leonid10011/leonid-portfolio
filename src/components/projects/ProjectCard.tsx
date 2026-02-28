@@ -1,10 +1,7 @@
-"use client";
-
-import { Project } from "@/src/types/projects";
 import Link from "next/link";
 import styles from "./ProjectCard.module.css";
 import ProjectMeta from "./ProjectMeta";
-import { useEffect } from "react";
+import { Project } from "@/src/lib/wp/mapper";
 
 
 type ProjectCardProps = {
@@ -13,10 +10,6 @@ type ProjectCardProps = {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   
-  useEffect(() => {
-    console.log("Test: ", project);
-  })
-
   return (
     <article className={styles.projectCard}>
       <Link

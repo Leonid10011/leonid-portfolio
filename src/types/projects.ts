@@ -1,4 +1,4 @@
-export type Project = {
+export type WpAcfProject = {
     slug: string;
     title: string;
     role: string;
@@ -16,7 +16,14 @@ export type Project = {
     learnings: string;
 }
 
+export type WpProject = {
+    id: number,
+    slug: string,
+    title: { rendered: string},
+    acf : WpAcfProject,
+}
+
 export type ImplementationItem = {
-    desc: string;
-    imgSrc: string;
+    description: string;
+    image?: string;
 }

@@ -1,7 +1,7 @@
-import { Project } from "@/src/types/projects"
+
+import { Project } from "@/src/lib/wp/mapper";
 import ProjectCard from "./ProjectCard";
 import styles from "./ProjectsGrid.module.css";
-import { Fragment } from "react/jsx-runtime";
 
 type ProjectsGridProps = {
     projects: Project[];
@@ -12,8 +12,7 @@ export default function ProjectsGrid({ projects }: ProjectsGridProps) {
     return(
         <div className={styles.projectsGrid}>
             {projects.map((project, i) => (
-                <ProjectCard key={project.slug} project={project} />
-
+                <ProjectCard key={i} project={project} />
             ))}
         </div>
     );
