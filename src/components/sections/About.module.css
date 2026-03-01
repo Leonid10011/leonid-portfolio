@@ -51,6 +51,7 @@
         flex-direction: row;
         gap: var(--space-64);
         align-items: flex-start;
+        justify-content: space-between;
     }
 
     .text {

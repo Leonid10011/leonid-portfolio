@@ -1,4 +1,3 @@
-
 import { Project } from "@/src/lib/wp/mapper";
 import ProjectCard from "./ProjectCard";
 import styles from "./ProjectsGrid.module.css";

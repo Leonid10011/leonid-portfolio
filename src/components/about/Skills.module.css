@@ -84,6 +84,10 @@
         justify-content: flex-start;
     }
 
+    .group.frontend .title {
+        font-size: var(--fs-h3);
+    }
+
     .bottom {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
