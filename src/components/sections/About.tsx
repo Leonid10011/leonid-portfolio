@@ -11,13 +11,10 @@ export default function About() {
                     <div className={styles.content}>
                         <div className={`${styles.text} ${styles.textDesktop} prose`}>
                             <p>
-                                I’m a frontend-focused developer with an interest in clean architecture, performance and modern CMS-driven workflows.
+                            I'm a frontend developer focused on building structured web applications with <b>Next.js</b> and headless <b>WordPress</b>.<br/>
                             </p>
                             <p>
-                            I work primarily with Next.js and headless WordPress, building scalable interfaces that balance structure, flexibility and maintainability.<br/>
-                            </p>
-                            <p>
-                            My focus is on production-ready code and clear system design rather than visual gimmicks.
+                            My current work emphasizes scalable component systems, clean architectural thinking, and CMS integration via REST APIs.
                             </p>
                         </div>
 
@@ -34,7 +31,7 @@ export default function About() {
                         </div>
 
                         <div className={styles.skills}>
-                            <p className={`${styles.skillsIntro} text-subline`}>A short overview of my background and technical focus.</p>
+                            {/*<p className={`${styles.skillsIntro} text-subline`}>Background & Technical Focus</p>*/}
                             <Skills/>
                         </div>
                     </div>

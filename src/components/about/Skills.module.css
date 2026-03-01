@@ -9,7 +9,7 @@
     flex-wrap: wrap;
     justify-content: center;
     /* Nutze gap für den Abstand zwischen Text und Punkt */
-    column-gap: var(--space-12); 
+    column-gap: var(--space-8); 
     row-gap: var(--space-8);
     padding: 0;
     margin: 0;
@@ -20,6 +20,7 @@
     font-size: 16px;
     display: flex;
     align-items: center;
+    text-align: center;
 }
 
 /* Der Punkt wird NUR zwischen den Elementen eingefügt */
@@ -39,7 +40,8 @@
 
 .title {
     text-align: center;
-    font-size: 22px;
+    font-size: var(--fs-subline);
+    letter-spacing: 2%;
     line-height: 1.5;
     font-weight: var(--fw-medium);
 }
@@ -48,20 +50,36 @@
 
 @media (min-width: 768px) {
     .inner {
-        flex-direction: row;
-        gap: var(--space-64);
+        flex-direction: column;
+        gap: var(--space-48);
     }
 
     .group ul {
+        
         flex-direction: column;
         list-style: none;
         justify-content: flex-start;
         flex-wrap: nowrap;
     }
 
+    .group.frontend ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        column-gap: var(--space-48);
+
+    }
+
+    .bottom {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-48);
+    }
+
     .group li {
-        margin-bottom: var(--space-16);
+        margin-bottom: var(--space-8);
         list-style: none;
+        text-align: start;
     }
 
     .group li:not(:last-child)::after {
@@ -70,7 +88,8 @@
     }
 
     .title {
-        margin-bottom: var(--space-24);
+        font-size: var(--fs-subline);
         text-align: start;
+        line-height: 1; /* Position 'Frontend' heading on same horizontal line as text on the left */
     }
 } 
