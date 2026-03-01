@@ -12,8 +12,8 @@ export default function Hero() {
                         <h1 id="hero-heading" className={styles.headline}>Frontend Developer focused on design and architecture</h1>
                         <p className={styles.subline}>I build fast, scalable websites with Next.js and WordPress.</p>
                         <div className={styles.ctas}>
-                            <Button href={"#contact"} text="CONTACT" variant="primary"/>
-                            <Button href={"#projects"} text="PROJECTS" variant="secondary"/>
+                            <Button href={"#contact"} text="CONTACT" variant="primary" id="contact"/>
+                            <Button href={"#projects"} text="PROJECTS" variant="secondary" id="projects"/>
                         </div>
                     </div>
                     <div  className={styles.visuals} aria-hidden="true">

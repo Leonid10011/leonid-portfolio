@@ -78,7 +78,10 @@
         grid-template-columns: repeat(2, 1fr);
         justify-content: space-between;
         column-gap: var(--space-48);
+    }
 
+    .group.frontend li {
+        justify-content: flex-start;
     }
 
     .bottom {

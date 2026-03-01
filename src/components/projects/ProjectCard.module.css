@@ -11,6 +11,10 @@
     transition: box-shadow 150ms ease;
 }
 
+.projectCard {
+    width: auto;
+}
+
 .media:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
@@ -30,10 +34,7 @@
     color: var(--color-text);
 }
 
-.title a:hover {
-    transform: scale(1.05);
-    color: var(--color-accent);
-}
+
 
 .links {
     display: flex;
@@ -51,8 +52,24 @@
     transition: transform 150ms ease, text-shadow 150ms ease;
 }
 
-.link:hover {
+
+
+@media (min-width: 768px) {
+    .media {
+        aspect-ratio: 4 / 3;
+    }
+
+    .projectCard {
+        width: 28%;
+    }
+
+    .title a:hover {
+    transform: scale(1.05);
+    color: var(--color-accent);
+}
+
+    .link:hover {
     transform: scale(1.03);
     text-shadow: 0 2px 4px rgba(0, 0, 0, .15);
 }
-
+}

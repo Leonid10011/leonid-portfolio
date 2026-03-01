@@ -3,6 +3,8 @@ import Link from "next/link";
 import Container from "../layout/Container";
 import styles from "./Header.module.css";
 import Button from "../ui/Button";
+import { scrollToId } from "@/src/lib/utils";
+import { NavLink } from "./navbar/NavLink";
 
 type HeaderProps = {
     variant?: "sections" | "simple";
@@ -27,13 +29,11 @@ export default function Header({ variant = "sections" }: HeaderProps) {
                     {variant === "sections" && (
                         <ul className={styles.navLinks}>
                             {links.map((link, index) => (
-                                <li key={index}>
-                                    <a href={link.href}>{link.label}</a>
-                                </li>
+                                <NavLink key={index} href={link.href} text={link.label} />
                             ))}
                         </ul>)}
                         
-                    <Button href={"#contact"} text="CONTACT" variant="nav"/>
+                    <Button href={"#contact"} text="CONTACT" variant="nav" id="contact"/>
                 </div>
             </Container>
         </nav>
