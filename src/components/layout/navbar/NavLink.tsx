@@ -2,6 +2,7 @@
 
 import { scrollToId } from "@/src/lib/utils";
 import Link from "next/link";
+import styles  from "./NavLink.module.css";
 
 type NavLinkProps = {
     href: string; // z.B. "#projekte"
@@ -20,7 +21,7 @@ export function NavLink({ href, text, className }: NavLinkProps) {
     };
 
     return (
-        <Link href={href} className={className} onClick={handleClick}>
+        <Link href={href} className={styles.navLink} onClick={handleClick}>
             {text}
         </Link>
     );
