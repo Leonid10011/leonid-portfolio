@@ -20,6 +20,7 @@ export type WpProject = {
     slug: string,
     title: { rendered: string},
     acf : WpAcfProject,
+    modified: string,
 }
 
 export type ImplementationItem = {
