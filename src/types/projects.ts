@@ -21,6 +21,7 @@ export type WpProject = {
     title: { rendered: string},
     acf : WpAcfProject,
     modified: string,
+    featured_image_url: string;
 }
 
 export type ImplementationItem = {

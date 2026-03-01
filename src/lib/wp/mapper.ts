@@ -17,6 +17,7 @@ export type Project = {
     frontend?: string;
     implementationItems: Array<{ description: string; date?: string; image?: string }>;
     learnings?: string;
+    featured_image_url?: string;
 };
 
 export function mapWpProject(p: WpProject): Project {
@@ -35,5 +36,7 @@ export function mapWpProject(p: WpProject): Project {
     architecture: p.acf?.architecture || undefined,
     frontend: p.acf?.frontend || undefined,
     implementationItems: Array.isArray(p.acf?.implementationItems) ? p.acf.implementationItems : [],
+    learnings: p.acf?.learnings || undefined,
+    featured_image_url: p.featured_image_url || undefined,
   };
 }

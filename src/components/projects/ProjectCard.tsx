@@ -2,6 +2,7 @@ import Link from "next/link";
 import styles from "./ProjectCard.module.css";
 import ProjectMeta from "./ProjectMeta";
 import { Project } from "@/src/lib/wp/mapper";
+import Image from "next/image";
 
 
 type ProjectCardProps = {
@@ -17,7 +18,13 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         href={`/projects/${project.slug}`}
         aria-label="View project case study."
       >
-        <div className={styles.media} aria-hidden="true" />
+        <div className={styles.media} aria-hidden="true">
+        <Image 
+            src={project.featured_image_url || "/placeholder.png"} 
+            alt={project.featured_image_url ? `Featured image for ${project.title}` : "Placeholder image"}
+            fill
+          />
+        </div>
       </Link>
       <div className={styles.body}>
         <h3 className={styles.title}>

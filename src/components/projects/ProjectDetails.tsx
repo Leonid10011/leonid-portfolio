@@ -3,6 +3,10 @@ import styles from "./ProjectDetails.module.css";
 import ProjectMeta from "./ProjectMeta";
 import Link from "next/link";
 import ImplementationItems from "./Implementationtems";
+import Image from "next/image";
+import Button from "../ui/Button";
+
+
 
 export default function ProjectDetails ({project} : {project: Project}) {
     return (
@@ -13,12 +17,17 @@ export default function ProjectDetails ({project} : {project: Project}) {
                     <p className={styles.heroSubline}>{project.summary}</p>
                     <ProjectMeta project={project} />
                     <div className={styles.ctas}>
-                        <Link className="btn btnPrimary" href={`/projects/${project.slug}`}>{"Website"}</Link>
-                        <Link className="btn btnSecondary" href={`/projects/${project.slug}`}>{"Github"}</Link>
+                        <Button  href={project.liveUrl || "#"}  text="Website" variant="primary" />
+                        <Button  href={project.githubUrl || "#"} text="Github" variant="secondary" />
                     </div>
                 </div>
                 <div className={styles.heroMedia}>
-                </div>
+                    <Image 
+                        src={project.featured_image_url || "/placeholder.png"} 
+                        alt={project.featured_image_url ? `Featured image for ${project.title}` : "Placeholder image"}
+                        fill
+                    />
+    </div>
             </div>
 
             <section className={`${styles.section}`}>
