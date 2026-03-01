@@ -1,11 +1,20 @@
+// src/app/projects/[slug]/page.tsx
 import { notFound } from "next/navigation";
 
 import Container from "@/src/components/layout/Container";
 import ProjectDetails from "@/src/components/projects/ProjectDetails";
 import styles from "./page.module.css";
-import { getProjectBySlug } from "@/src/lib/wp/project";
+import { getProjectBySlug, getProjectsSafe } from "@/src/lib/wp/project";
 import { mapWpProject } from "@/src/lib/wp/mapper";
 
+
+export async function generateStaticParams() {
+  const wpProjects = await getProjectsSafe();
+  const projects = wpProjects.map(mapWpProject);  
+  return projects.map((project) => ({
+    slug: project.slug,
+  }));
+}
 
 export default async function ProjectDetail({
   params,
@@ -13,7 +22,8 @@ export default async function ProjectDetail({
   params: Promise<{ slug: string }>;
 }) {
 
-  const wp = await getProjectBySlug((await params).slug);
+  const slug = (await params).slug;
+  const wp = await getProjectBySlug(slug);
   if (!wp) return notFound();
 
   const project = mapWpProject(wp);
