@@ -8,10 +8,9 @@ import { getProjectBySlug, getProjectsSafe } from "@/src/lib/wp/project";
 import { mapWpProject } from "@/src/lib/wp/mapper";
 import { Metadata } from "next";
 
-
 export async function generateStaticParams() {
   const wpProjects = await getProjectsSafe();
-  const projects = wpProjects.map(mapWpProject);  
+  const projects = wpProjects.map(mapWpProject);
   return projects.map((project) => ({
     slug: project.slug,
   }));
@@ -32,10 +31,12 @@ export async function generateMetadata({
   // Nutze hier deine gemappten Daten oder die rohen WP-Daten
   return {
     title: `${project.title.rendered} | Dein Name Portfolio`,
-    description: project.acf?.summary || "Ein spannendes Projekt aus meinem Portfolio.",
+    description:
+      project.acf?.project_summary ||
+      "Ein spannendes Projekt aus meinem Portfolio.",
     openGraph: {
       title: project.title.rendered,
-      description: project.acf?.summary,
+      description: project.acf?.project_summary,
       images: [project.featured_image_url || "/og-image.png"],
     },
   };
@@ -46,7 +47,6 @@ export default async function ProjectDetail({
 }: {
   params: Promise<{ slug: string }>;
 }) {
-
   const slug = (await params).slug;
   const wp = await getProjectBySlug(slug);
   if (!wp) return notFound();

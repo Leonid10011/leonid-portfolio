@@ -1,5 +1,5 @@
 // src/lib/wp/project.ts
-import { WpAcfProject, WpProject } from "@/src/types/projects";
+import { WpProject } from "@/src/types/projects";
 import { fetchJson } from "./client";
 
 export async function getProjects(): Promise<WpProject[]> {
