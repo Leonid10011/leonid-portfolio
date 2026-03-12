@@ -12,7 +12,7 @@ export default function ProjectMeta ({project} : {project: Project}) {
             </div>
             <div className={styles.metaRow}>
             <span className={styles.label}>Stack:</span>
-            <span className={styles.value}>{project.stack}</span>
+            <span className={styles.value}>{Array.isArray(project.stack) ? project.stack.join(", ") : project.stack}</span>
             </div>
             <div className={styles.metaRow}>
             <span className={styles.label}>Year:</span>

@@ -1,62 +1,79 @@
 import { Project } from "@/src/lib/wp/mapper";
 import styles from "./ProjectDetails.module.css";
 import ProjectMeta from "./ProjectMeta";
-import Link from "next/link";
-import ImplementationItems from "./Implementationtems";
 import Image from "next/image";
 import Button from "../ui/Button";
+import ProjectSection from "./projectDetails/ProjectSection";
 
+export default function ProjectDetails({ project }: { project: Project }) {
+  const sections = [
+    { title: "Problem", html: project.problem },
+    { title: "Solution", html: project.solution },
+    {
+      title: "Architecture & Technical Decisions",
+      html: project.architecture,
+    },
+    { title: "Challenges", html: project.challenges },
+    { title: "Quality & Validation", html: project.testingQuality },
+    { title: "Results", html: project.results },
+    { title: "Learnings", html: project.learnings },
+    { title: "Next Steps", html: project.nextSteps },
+  ].filter((section) => Boolean(section.html));
 
+  return (
+    <div className={styles.inner}>
+      <h1 className={styles.title}>{project.title}</h1>
 
-export default function ProjectDetails ({project} : {project: Project}) {
-    return (
-        <div className={styles.inner}>
-            <h1 className={styles.title}>{project.title}</h1>
-            <div className={styles.hero}>
-                <div className={styles.heroContent}>
-                    <p className={styles.heroSubline}>{project.summary}</p>
-                    <ProjectMeta project={project} />
-                    <div className={styles.ctas}>
-                        <Button  href={project.liveUrl || "#"}  text="Website" variant="primary" />
-                        <Button  href={project.githubUrl || "#"} text="Github" variant="secondary" />
-                    </div>
-                </div>
-                <div className={styles.heroMedia}>
-                    <Image 
-                        src={project.featured_image_url || "/placeholder.png"} 
-                        alt={project.featured_image_url ? `Featured image for ${project.title}` : "Placeholder image"}
-                        fill
-                    />
-    </div>
-            </div>
-
-            <section className={`${styles.section}`}>
-                <h2>Problem & Goal</h2>
-                <p>{project.problem}</p>
-            </section>
-
-            <section className={`${styles.section}`}>
-                <h2>Solution Apporoach</h2>
-                <p>{project.solution}</p>
-
-            </section>
-                
-            <section className={`${styles.section}`}>
-                <h2>Architecture & Structure</h2>
-                <div className={styles.architectureMedia}>
-                
-                </div>
-            </section>
-
-            <section className={`${styles.section}`}>
-                <h2>Frontend Implementation</h2>
-                <ImplementationItems items={project.implementationItems}/>
-            </section>
-
-            <section className={`${styles.section}`}>
-                <h2>Learnings</h2>
-                <p>{project.learnings}</p>  
-            </section>
+      <div className={styles.hero}>
+        <div className={styles.heroContent}>
+          <div
+            className={styles.heroSubline}
+            dangerouslySetInnerHTML={{ __html: project.summary }}
+          />
+          <ProjectMeta project={project} />
+          <div className={styles.ctas}>
+            {project.liveUrl && (
+              <Button
+                href={project.liveUrl}
+                text="Live Demo"
+                variant="primary"
+              />
+            )}
+            {project.githubUrl && (
+              <Button
+                href={project.githubUrl}
+                text="Github"
+                variant="secondary"
+              />
+            )}
+          </div>
         </div>
-    )
+
+        <div className={styles.heroMedia}>
+          <Image
+            src={
+              project.heroImage ||
+              project.featured_image_url ||
+              "/placeholder.png"
+            }
+            alt={
+              project.heroImage || project.featured_image_url
+                ? `Featured image for ${project.title}`
+                : "Placeholder image"
+            }
+            fill
+          />
+        </div>
+      </div>
+
+      {sections.map((section, idx) => (
+        <ProjectSection
+          key={section.title}
+          title={section.title}
+          html={section.html}
+          index={idx + 1}
+        />
+      ))}
+    </div>
+  );
 }
