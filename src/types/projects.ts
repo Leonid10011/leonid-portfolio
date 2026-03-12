@@ -2,7 +2,7 @@ export type WpAcfProject = {
   slug: string;
   title: string;
   project_role: string;
-  project_stack: string[];
+  project_stack: string;
   project_year: number;
   project_live_url?: string;
   project_github_url?: string;

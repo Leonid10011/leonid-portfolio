@@ -29,12 +29,16 @@ export type Project = {
 };
 
 export function mapWpProject(p: WpProject): Project {
+  console.log(
+    "[Mapper] Mapping WP project stack :",
+    p.acf?.project_stack.split("\n").map((s) => s.trim()),
+  );
   return {
     id: p.id,
     slug: p.slug,
     title: p.title?.rendered || p.acf?.title || p.slug,
     role: p.acf?.project_role || "",
-    stack: Array.isArray(p.acf?.project_stack) ? p.acf.project_stack : [],
+    stack: p.acf.project_stack.split("\n").map((s) => s.trim()) || [],
     year: p.acf?.project_year ? String(p.acf.project_year) : "",
     liveUrl: p.acf?.project_live_url || undefined,
     githubUrl: p.acf?.project_github_url || undefined,

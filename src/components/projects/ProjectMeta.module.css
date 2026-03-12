@@ -1,41 +1,40 @@
 .meta {
-
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-16);
-    margin-bottom: var(--space-48);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  margin-bottom: var(--space-48);
 }
 
 .metaRow {
-    
-    display: flex;
-    align-items: flex-start;
-    gap: var(--space-8);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-8);
 }
 
 .label {
-    font-family: var(--ff-body);
-    font-weight: var(--fw-medium);
-    font-size: 18px;
-    flex-shrink: 0;
-    line-height: 22px;
+  font-family: var(--ff-body);
+  font-weight: var(--fw-medium);
+  font-size: 18px;
+  flex-shrink: 0;
+  line-height: 22px;
 }
 
 .value {
-    font-family: var(--ff-body);
-    font-weight: var(--fw-regular);
-    font-size: 12px;
-    line-height: 22px;
+  font-family: var(--ff-body);
+  font-weight: var(--fw-regular);
+  font-size: 14px;
+  line-height: 22px;
 }
 
 @media (min-width: 768px) {
-    .label {
-        font-size: 20px;
-        line-height: 24px;
-    }
+  .label {
+    font-size: 20px;
+    line-height: 24px;
+    width: 5ch;
+  }
 
-    .value {
-        font-size: 14px;
-        line-height: 24px;
-    }
+  .value {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

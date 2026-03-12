@@ -36,8 +36,6 @@ export async function getProjectsSafe(): Promise<WpProject[]> {
       },
     });
 
-    console.log("[WP] Fetched projects:", result);
-
     return result;
   } catch (error) {
     console.error("[WP] Failed to fetch projects:", error);
