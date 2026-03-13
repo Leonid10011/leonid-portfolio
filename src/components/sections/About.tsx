@@ -17,7 +17,7 @@ export default function About() {
           <div className={styles.content}>
             <div className={`${styles.text} ${styles.textDesktop} prose`}>
               <p>
-                I'm a frontend developer focused on building structured,
+                I&apos;m a frontend developer focused on building structured,
                 scalable web applications with <b>Next.js</b> and{" "}
                 <b>TypeScript</b>. I enjoy designing clean systems where UI,
                 data, and architecture work together in a predictable way.
@@ -32,7 +32,7 @@ export default function About() {
 
             <div className={`${styles.text} ${styles.textMobile} prose`}>
               <p>
-                I'm a frontend developer focused on building structured,
+                I&apos;m a frontend developer focused on building structured,
                 scalable web applications with <b>Next.js</b> and{" "}
                 <b>TypeScript</b>.
                 <br />
