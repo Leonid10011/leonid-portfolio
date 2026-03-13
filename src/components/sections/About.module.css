@@ -1,82 +1,83 @@
 .inner {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--space-48);
-
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-48);
 }
 
 .content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: var(--space-48);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-48);
 }
 
-
 .text {
-    display: flex;
-    flex-direction: column;
-    padding-inline: 0;
-    max-width: 300px;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding-inline: 0;
+  max-width: 300px;
+  text-align: center;
 }
 
 .textMobile {
-    display: block;
+  display: block;
 }
 
 .textDesktop {
-    display: none;
+  display: none;
 }
 
 .skills {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-32);
-    padding-inline: var(--space-48);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-32);
+  padding-inline: var(--space-48);
 }
 
 .skillsIntro {
-    color: var(--color-meta);
-    display: none;
-    
+  color: var(--color-meta);
+  display: none;
 }
 
 @media (min-width: 768px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-64);
+    align-items: flex-start;
+    justify-content: space-between;
+  }
 
-    .content {
-        display: flex;
-        flex-direction: row;
-        gap: var(--space-64);
-        align-items: flex-start;
-        justify-content: space-between;
-    }
+  .text {
+    text-align: start;
+    padding-inline: var(--space-48);
+  }
 
-    .text {
-        text-align: start;
-        padding-inline: var(--space-48);
-        max-width: 320px;
-    }
+  .textMobile {
+    display: none;
+  }
 
-    .textMobile {
-        display: none;
-    }
+  .textDesktop {
+    display: flex;
+    max-width: 50%;
+    align-self: center;
+    text-align: start;
+    justify-content: center;
+  }
 
-    .textDesktop {
-        display: block;
-    }    
+  .skills {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: var(--space-32);
+    padding-inline: var(--space-48);
+    align-items: center;
+  }
 
-    .skills {
-        display: flex;
-        flex-direction: column;
-        gap: var(--space-32);
-        padding-inline: var(--space-48);
-    }
-
-    .skillsIntro {
-        display: block;
-        text-align: center;
-    }
+  .skillsIntro {
+    display: block;
+    text-align: center;
+  }
 }
