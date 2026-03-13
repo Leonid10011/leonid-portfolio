@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Container from "../layout/Container";
 import styles from "./Hero.module.css";
 import Button from "../ui/Button";
