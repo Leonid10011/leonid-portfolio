@@ -1,3 +1,4 @@
+// src/api/database.types.ts
 export type WpAcfProject = {
   slug: string;
   title: string;

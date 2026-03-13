@@ -1,9 +1,9 @@
-import { Project } from "@/src/lib/wp/mapper";
 import styles from "./ProjectDetails.module.css";
 import ProjectMeta from "./ProjectMeta";
 import Image from "next/image";
 import Button from "../ui/Button";
 import ProjectSection from "./projectDetails/ProjectSection";
+import { Project } from "@/src/domain/project";
 
 export default function ProjectDetails({ project }: { project: Project }) {
   const sections = [

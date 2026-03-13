@@ -4,9 +4,13 @@ import { notFound } from "next/navigation";
 import Container from "@/src/components/layout/Container";
 import ProjectDetails from "@/src/components/projects/ProjectDetails";
 import styles from "./page.module.css";
-import { getProjectBySlug, getProjectsSafe } from "@/src/lib/wp/project";
-import { mapWpProject } from "@/src/lib/wp/mapper";
+import {
+  getProjectBySlug,
+  getProjectsSafe,
+} from "@/src/repo/projectRepository";
+
 import { Metadata } from "next";
+import { mapWpProject } from "@/src/api/mapper";
 
 export async function generateStaticParams() {
   const wpProjects = await getProjectsSafe();

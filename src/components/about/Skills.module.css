@@ -26,7 +26,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* Nutze gap für den Abstand zwischen Text und Punkt */
   column-gap: var(--space-8);
   row-gap: var(--space-8);
   padding: 0;

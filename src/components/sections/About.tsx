@@ -45,7 +45,6 @@ export default function About() {
             </div>
 
             <div className={styles.skills}>
-              {/*<p className={`${styles.skillsIntro} text-subline`}>Background & Technical Focus</p>*/}
               <Skills />
             </div>
           </div>

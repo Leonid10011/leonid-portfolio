@@ -1,6 +1,7 @@
-// src/lib/wp/project.ts
-import { WpProject } from "@/src/types/projects";
-import { fetchJson } from "./client";
+// src/repo/projectRepository.ts
+
+import { fetchJson } from "@/src/api/wordpressApi";
+import { WpProject } from "../api/wordpressTypes";
 
 export async function getProjects(): Promise<WpProject[]> {
   return fetchJson<WpProject[]>("/project?per_page=10", {
