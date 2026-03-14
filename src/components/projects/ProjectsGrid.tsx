@@ -1,18 +1,17 @@
-import { Project } from "@/src/lib/wp/mapper";
+import { Project } from "@/src/domain/project";
 import ProjectCard from "./ProjectCard";
 import styles from "./ProjectsGrid.module.css";
 
 type ProjectsGridProps = {
-    projects: Project[];
-}
+  projects: Project[];
+};
 
 export default function ProjectsGrid({ projects }: ProjectsGridProps) {
-
-    return(
-        <div className={styles.projectsGrid}>
-            {projects.map((project, i) => (
-                <ProjectCard key={i} project={project} />
-            ))}
-        </div>
-    );
+  return (
+    <div className={styles.projectsGrid}>
+      {projects.map((project, i) => (
+        <ProjectCard key={i} project={project} />
+      ))}
+    </div>
+  );
 }

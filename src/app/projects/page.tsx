@@ -1,9 +1,8 @@
+import { mapWpProject } from "@/src/api/mapper";
+import { getProjects } from "@/src/repo/projectRepository";
 import Link from "next/link";
-import { getProjects } from "@/src/lib/wp/project";
-import { mapWpProject } from "@/src/lib/wp/mapper";
 
 export default async function ProjectsPage() {
-
   const wpProjects = await getProjects();
   const projects = wpProjects.map(mapWpProject);
 

@@ -1,38 +1,8 @@
-// src/lib/wp/mapper.ts
-import type { WpProject } from "@/src/types/projects";
-
-export type Project = {
-  id: number;
-  slug: string;
-  title: string;
-  role: string;
-  stack: string[];
-  year: string;
-  liveUrl?: string;
-  githubUrl?: string;
-  summary: string;
-  problem: string;
-  goal: string;
-  solution: string;
-  architecture?: string;
-  implementation?: string;
-  challenges?: string;
-  testingQuality?: string;
-  results?: string;
-  learnings: string;
-  nextSteps?: string;
-  featured: boolean;
-  cardTeaser?: string;
-  sortOrder: number;
-  heroImage?: string;
-  featured_image_url?: string;
-};
+// src/api/mapper.ts
+import { Project } from "../domain/project";
+import { WpProject } from "./wordpressTypes";
 
 export function mapWpProject(p: WpProject): Project {
-  console.log(
-    "[Mapper] Mapping WP project stack :",
-    p.acf?.project_stack.split("\n").map((s) => s.trim()),
-  );
   return {
     id: p.id,
     slug: p.slug,
