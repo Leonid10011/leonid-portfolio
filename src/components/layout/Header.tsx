@@ -35,7 +35,14 @@ export default function Header({ variant = "sections" }: HeaderProps) {
             </ul>
           )}
 
-          <Button href={"#contact"} text="CONTACT" variant="nav" id="contact" />
+          <Button
+            href={
+              "mailto:leonid.budkov@gmail.com?subject=Frontend%20Opportunity"
+            }
+            text="CONTACT"
+            variant="nav"
+            id="contact"
+          />
         </div>
       </Container>
     </nav>

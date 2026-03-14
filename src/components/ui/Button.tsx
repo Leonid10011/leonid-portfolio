@@ -17,7 +17,6 @@ export default function Button({
   id = "",
 }: ButtonProps) {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault(); // Prevents browser to write # in the URL when clicking the link
     scrollToId(id);
   };
 
