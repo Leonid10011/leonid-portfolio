@@ -4,6 +4,7 @@ import ProjectMeta from "./ProjectMeta";
 
 import Image from "next/image";
 import { Project } from "@/src/domain/project";
+import { ExternalLink, Github } from "lucide-react";
 
 type ProjectCardProps = {
   project: Project;
@@ -39,23 +40,25 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <div className={styles.links}>
           {project.liveUrl && (
             <a
-              className={styles.link}
               href={project.liveUrl}
+              className={styles.cardLink}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
-              {new URL(project.liveUrl).host}
+              Live Demo
+              <ExternalLink />
             </a>
           )}
 
           {project.githubUrl && (
             <a
-              className={styles.link}
               href={project.githubUrl}
+              className={styles.cardLink}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
-              {new URL(project.githubUrl).host}
+              GitHub
+              <Github />
             </a>
           )}
         </div>
