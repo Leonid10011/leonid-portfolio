@@ -14,9 +14,13 @@
 
 ## 📸 Preview
 
-[Project Screenshot](https://via.placeholder.com)
+<p align="center">
+  <img src="./public/screenshot.png" 
+       alt="Architecture Diagram" 
+       width="650">
+</p>
 
-_Live Demo:_ [placeholder.com](https://your-portfolio-url.com/)
+_Live Demo:_ [leonid-dev.com](https://leonid-dev.com/)
 
 ## 🎯 Project Purpose
 
@@ -27,7 +31,7 @@ This repository serves as a showcase for my skills in **Frontend Engineering** a
 | Layer          | Technology                                               |
 | -------------- | -------------------------------------------------------- |
 | **Frontend**   | [Next.js](https://nextjs.org/) (App Router), CSS Modules |
-| **Backend**    | Headless WordPress via REST API / WPGraphQL              |
+| **Backend**    | Headless WordPress via REST API                          |
 | **Design**     | Figma                                                    |
 | **Deployment** | Vercel                                                   |
 
