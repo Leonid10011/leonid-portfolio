@@ -16,7 +16,7 @@ export default function Button({
   variant = "primary",
   id = "",
 }: ButtonProps) {
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  const handleClick = () => {
     scrollToId(id);
   };
 

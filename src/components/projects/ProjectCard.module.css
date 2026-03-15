@@ -1,76 +1,105 @@
 .media {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    border-radius: var(--radius-8);
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-8);
+  overflow: hidden;
 
-    background: linear-gradient(135deg, rgba(126,165,242,0.28), rgba(15,23,42,0.06));
-    border: 1px solid var(--color-border);
-    border-radius: 8px 8px 0 0;
+  background: linear-gradient(
+    135deg,
+    rgba(126, 165, 242, 0.28),
+    rgba(15, 23, 42, 0.06)
+  );
+  border: 1px solid var(--color-border);
+  border-radius: 8px 8px 0 0;
 
-    transition: box-shadow 150ms ease;
+  transition: box-shadow 150ms ease;
 }
 
 .projectCard {
-    width: auto;
+  width: auto;
 }
 
 .media:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .body {
-    padding-inline: var(--space-16);
+  padding-inline: var(--space-16);
 }
 
 .title {
-    margin-block: var(--space-24);
-    transition: transform 150ms ease, color 150ms ease;
-    text-align: center;
+  margin-block: var(--space-24);
+  transition:
+    transform 150ms ease,
+    color 150ms ease;
+  text-align: center;
 }
 
 .title a {
-    text-decoration: none;
-    color: var(--color-text);
+  text-decoration: none;
+  color: var(--color-text);
 }
 
-
-
 .links {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
 }
 
 .link {
-    display: flex;
-    flex-direction: column;
-    height: 44px;
-    justify-content: center;
-    color: var(--color-link);
+  display: flex;
+  flex-direction: column;
+  height: 44px;
+  justify-content: center;
+  color: var(--color-link);
 
-    transition: transform 150ms ease, text-shadow 150ms ease;
+  transition:
+    transform 150ms ease,
+    text-shadow 150ms ease;
 }
 
+.cardLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  padding: var(--radius-8) var(--space-16);
+  background: var(--color-accent);
+  color: var(--color-text);
+  border-radius: var(--space-8);
+  text-decoration: none;
+  font-weight: 600;
+  transition:
+    background 0.2s,
+    box-shadow 0.2s;
+}
 
+.cardLink:hover {
+  background: var(--color-accent);
+  opacity: 0.8;
+  box-shadow: 0 2px 8px rgba(30, 41, 59, 0.08);
+}
+.icon {
+  width: 1em;
+  height: 1em;
+}
 
 @media (min-width: 768px) {
-    .media {
-        aspect-ratio: 4 / 3;
-    }
+  .media {
+    aspect-ratio: 4 / 3;
+  }
 
-    .projectCard {
-        width: 28%;
-    }
+  .projectCard {
+    width: 28%;
+  }
 
-    .title a:hover {
+  .title a:hover {
     transform: scale(1.05);
     color: var(--color-accent);
-}
+  }
 
-    .link:hover {
+  .link:hover {
     transform: scale(1.03);
-    text-shadow: 0 2px 4px rgba(0, 0, 0, .15);
-}
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  }
 }
