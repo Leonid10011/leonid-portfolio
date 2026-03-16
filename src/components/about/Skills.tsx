@@ -19,7 +19,7 @@ export default function Skills() {
           <li>Supabase & data modeling</li>
           <li>REST API integration</li>
           <li>Headless WordPress</li>
-          <li>Custom post types & content structures</li>
+          <li>Content modeling (Wordpress)</li>
         </ul>
       </div>
 
