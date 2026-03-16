@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/freelance-board",
+      "destination": "https://freelance-board-ufup.vercel.app/freelance-board"
+    },
+    {
+      "source": "/freelance-board/:path*",
+      "destination": "https://freelance-board-ufup.vercel.app/freelance-board/:path*"
+    }
+  ]
+}
