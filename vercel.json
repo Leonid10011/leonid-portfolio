@@ -7,6 +7,14 @@
     {
       "source": "/freelance-board/:path*",
       "destination": "https://freelance-board-ufup.vercel.app/freelance-board/:path*"
+    },
+    {
+      "source": "/collaboration-board",
+      "destination": "https://collaboration-board-peach.vercel.app/collaboration-board"
+    },
+    {
+      "source": "/collaboration-board/:path*",
+      "destination": "https://collaboration-board-peach.vercel.app/collaboration-board/:path*"
     }
   ]
 }
